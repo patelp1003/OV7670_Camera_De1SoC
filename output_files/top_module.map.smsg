@@ -1,0 +1,3 @@
+Warning (10268): Verilog HDL information at asyn_fifo.v(59): always construct contains both blocking and non-blocking assignments File: /homes/user/stud/spring24/pp2870/Downloads/SecureCam/security_camera/asyn_fifo.v Line: 59
+Warning (10268): Verilog HDL information at asyn_fifo.v(92): always construct contains both blocking and non-blocking assignments File: /homes/user/stud/spring24/pp2870/Downloads/SecureCam/security_camera/asyn_fifo.v Line: 92
+Warning (10268): Verilog HDL information at camera_interface.v(410): always construct contains both blocking and non-blocking assignments File: /homes/user/stud/spring24/pp2870/Downloads/SecureCam/security_camera/camera_interface.v Line: 410
