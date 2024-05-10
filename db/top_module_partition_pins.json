@@ -248,23 +248,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "key[2]",
-					"strict" : false
-				},
-				{
-					"name" : "key[1]",
-					"strict" : false
-				},
-				{
 					"name" : "key[0]",
-					"strict" : false
-				},
-				{
-					"name" : "key[3]",
-					"strict" : false
-				},
-				{
-					"name" : "cmos_vsync",
 					"strict" : false
 				},
 				{
@@ -273,18 +257,6 @@
 				},
 				{
 					"name" : "cmos_href",
-					"strict" : false
-				},
-				{
-					"name" : "cmos_db[0]",
-					"strict" : false
-				},
-				{
-					"name" : "cmos_db[1]",
-					"strict" : false
-				},
-				{
-					"name" : "cmos_db[2]",
 					"strict" : false
 				},
 				{
@@ -305,6 +277,22 @@
 				},
 				{
 					"name" : "cmos_db[7]",
+					"strict" : false
+				},
+				{
+					"name" : "cmos_vsync",
+					"strict" : false
+				},
+				{
+					"name" : "cmos_db[0]",
+					"strict" : false
+				},
+				{
+					"name" : "cmos_db[1]",
+					"strict" : false
+				},
+				{
+					"name" : "cmos_db[2]",
 					"strict" : false
 				}
 			]

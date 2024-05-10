@@ -4,7 +4,7 @@ module vga_interface(
 	input wire clk,rst_n,
 	//asyn_fifo IO
 	input wire empty_fifo,
-	input wire[15:0] din,
+	input wire[7:0] din,
 	output wire clk_vga,
 	output reg rd_en,
 	//VGA output
@@ -37,9 +37,9 @@ module vga_interface(
 	 always @* begin
 	 state_d=state_q;
 	 rd_en=0;
-	 r8Bit = din[15:11];
-	 g8Bit = din[15:11];
-	 b8Bit = din[15:11];
+	 r8Bit = din[7:3];
+	 g8Bit = din[7:3];
+	 b8Bit = din[7:3];
 	 r8Bit = (255/31) * r8Bit;
 	 g8Bit = (255/63) * g8Bit;
 	 b8Bit = (255/31) * b8Bit;
@@ -56,7 +56,7 @@ module vga_interface(
 	 vga_out_b=0;
 		case(state_q)
 		  delay: if(pixel_x==1 && pixel_y==1) state_d=idle; //delay of one frame(33ms) needed to start up the camera
-			idle:  if(pixel_x==1 && pixel_y==0 && !empty_fifo) begin //wait for pixel-data coming from asyn_fifo 
+			idle:  if(pixel_x==1 && pixel_y==0 ) begin //wait for pixel-data coming from asyn_fifo 
 							//vga_out_r=din[15:11]; 
 							//vga_out_g=din[10:5];
 							//vga_out_b=din[4:0];
@@ -66,7 +66,7 @@ module vga_interface(
 							rd_en=1;	
 							state_d=display;
 					end
-		display: if(pixel_x>=1 && pixel_x<=160  && pixel_y<120) begin //we will continue to read the asyn_fifo as long as current pixel coordinate is inside the visible screen(640x480) 
+		display: if(pixel_x>=1 && pixel_x<=80  && pixel_y<60) begin //we will continue to read the asyn_fifo as long as current pixel coordinate is inside the visible screen(640x480) 
 						vga_out_r=r8Bit; 
 						vga_out_g=g8Bit;
 						vga_out_b=b8Bit;

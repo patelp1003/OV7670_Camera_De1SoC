@@ -1,1 +1,4 @@
 v1
+GXB_MERGING,PLL Reference Clock Select Block,289254,camera_interface:m0|clock_12_0002:clock_12_inst|altera_pll:altera_pll_i|general[0].gpll~PLL_REFCLK_SELECT,vga_interface:m2|clock_25_0002:clock_25_inst|altera_pll:altera_pll_i|general[0].gpll~PLL_REFCLK_SELECT,
+GXB_MERGING,PLL Reconfiguration Block,289248,camera_interface:m0|clock_12_0002:clock_12_inst|altera_pll:altera_pll_i|general[0].gpll~PLL_RECONFIG,vga_interface:m2|clock_25_0002:clock_25_inst|altera_pll:altera_pll_i|general[0].gpll~PLL_RECONFIG,
+GXB_MERGING,Fractional PLL,288561,camera_interface:m0|clock_12_0002:clock_12_inst|altera_pll:altera_pll_i|general[0].gpll~FRACTIONAL_PLL,vga_interface:m2|clock_25_0002:clock_25_inst|altera_pll:altera_pll_i|general[0].gpll~FRACTIONAL_PLL,

@@ -64,27 +64,6 @@ state_q.byte1 0 0 1 0 0 0 0 0 0 1
 state_q.byte2 0 1 0 0 0 0 0 0 0 1 
 state_q.fifo_write 1 0 0 0 0 0 0 0 0 1 
 
-State Machine - |top_module|camera_interface:m0|debounce_explicit:m7|state_reg
-Name state_reg.delay1 state_reg.one state_reg.delay0 state_reg.idle 
-state_reg.idle 0 0 0 0 
-state_reg.delay0 0 0 1 1 
-state_reg.one 0 1 0 1 
-state_reg.delay1 1 0 0 1 
-
-State Machine - |top_module|camera_interface:m0|debounce_explicit:m6|state_reg
-Name state_reg.delay1 state_reg.one state_reg.delay0 state_reg.idle 
-state_reg.idle 0 0 0 0 
-state_reg.delay0 0 0 1 1 
-state_reg.one 0 1 0 1 
-state_reg.delay1 1 0 0 1 
-
-State Machine - |top_module|camera_interface:m0|debounce_explicit:m5|state_reg
-Name state_reg.delay1 state_reg.one state_reg.delay0 state_reg.idle 
-state_reg.idle 0 0 0 0 
-state_reg.delay0 0 0 1 1 
-state_reg.one 0 1 0 1 
-state_reg.delay1 1 0 0 1 
-
 State Machine - |top_module|camera_interface:m0|debounce_explicit:m4|state_reg
 Name state_reg.delay1 state_reg.one state_reg.delay0 state_reg.idle 
 state_reg.idle 0 0 0 0 

@@ -68,15 +68,15 @@
     if(c[27])begin   
     
     led0_test <=0;
-    led0_r<=0;
-    led0_g<=0;
+    // led0_r<=0;
+    // led0_g<=0;
     led0_b<=0;
     end
     
     else begin
     led0_test <=1;
-    led0_r<=1;
-    led0_g<=1;
+    // led0_r<=1;
+    // led0_g<=1;
     led0_b<=1;
     end
     
@@ -117,6 +117,7 @@
 	(
 		.clk(clk),
 		.clk_100(clk_sdram),
+		.clk_vga(clk_vga),
 		.rst_n(rst_n),
 		.key(key),
         .empty(empty),
@@ -125,8 +126,10 @@
 		//asyn_fifo IO/homes/user/stud/spring24/pp2870/Downloads/SecureCam/Test/top_module.qsf 
 		.rd_en(f2s_data_valid),
 		.rd_en_SD(rd_en_cam),
+		.rd_en_vga(rd_en),
 		.data_count_r(data_count_r),
 		.dout(dout),
+		.dout_vga(din),
 		.dout_SD(dout_SD),
 		//camera pinouts
 		.cmos_pclk(cmos_pclk),
@@ -139,7 +142,9 @@
 		.cmos_pwdn(cmos_pwdn),
 		.cmos_xclk(cmos_xclk),
 		//Debugging
-		.led_start(led0_start)
+		.led_start(led0_start),
+		.flag(led0_r),
+		.flag2(led0_g)
     );
 	 
 	 sdram_interface m1 //control logic for writing the pixel-data from camera to sdram and reading pixel-data from sdram to vga
@@ -153,7 +158,7 @@
 		.f2s_data(dout),
 		.f2s_data_valid(f2s_data_valid),
 		.empty_fifo(empty_fifo),
-		.dout(din),
+		.dout(),
 		//controller to sdram
 		.sdram_cke(sdram_cke), 
 		.sdram_cs_n(sdram_cs_n),
@@ -171,7 +176,7 @@
 		.clk(clk),
 		.rst_n(rst_n),
 		//asyn_fifo IO
-		.empty_fifo(empty_fifo),
+		.empty_fifo(),
 		.din(din),
 		.clk_vga(clk_vga),
 		.rd_en(rd_en),   

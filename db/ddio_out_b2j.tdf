@@ -1,5 +1,5 @@
 --altddio_out CBX_DECLARE_ALL_CONNECTED_PORTS="OFF" DEVICE_FAMILY="Cyclone V" EXTEND_OE_DISABLE="OFF" INVERT_OUTPUT="OFF" OE_REG="UNREGISTERED" POWER_UP_HIGH="OFF" WIDTH=1 datain_h datain_l dataout outclock
---VERSION_BEGIN 21.1 cbx_altddio_out 2021:10:21:11:02:24:SJ cbx_cycloneii 2021:10:21:11:02:24:SJ cbx_maxii 2021:10:21:11:02:24:SJ cbx_mgl 2021:10:21:11:11:47:SJ cbx_stratix 2021:10:21:11:02:24:SJ cbx_stratixii 2021:10:21:11:02:24:SJ cbx_stratixiii 2021:10:21:11:02:24:SJ cbx_stratixv 2021:10:21:11:02:24:SJ cbx_util_mgl 2021:10:21:11:02:24:SJ  VERSION_END
+--VERSION_BEGIN 21.1 cbx_altddio_out 2021:10:21:11:03:22:SJ cbx_cycloneii 2021:10:21:11:03:22:SJ cbx_maxii 2021:10:21:11:03:22:SJ cbx_mgl 2021:10:21:11:03:46:SJ cbx_stratix 2021:10:21:11:03:22:SJ cbx_stratixii 2021:10:21:11:03:22:SJ cbx_stratixiii 2021:10:21:11:03:22:SJ cbx_stratixv 2021:10:21:11:03:22:SJ cbx_util_mgl 2021:10:21:11:03:22:SJ  VERSION_END
 
 
 -- Copyright (C) 2021  Intel Corporation. All rights reserved.

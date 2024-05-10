@@ -3,7 +3,7 @@
 module asyn_fifo
 	#(
 		parameter DATA_WIDTH=8,
-					 FIFO_DEPTH_WIDTH=11  //total depth will then be 2**FIFO_DEPTH_WIDTH
+					 FIFO_DEPTH_WIDTH=13  //total depth will then be 2**FIFO_DEPTH_WIDTH
 	)
 	(
 	input wire rst_n,
@@ -141,7 +141,7 @@ endmodule
 	//inference template for dual port block ram
 module dual_port_sync
 	#(
-		parameter ADDR_WIDTH=11, //2k by 8 dual port synchronous ram(16k block ram)
+		parameter ADDR_WIDTH=13, //2k by 8 dual port synchronous ram(16k block ram)
 					 DATA_WIDTH=8
 	)
 	(
