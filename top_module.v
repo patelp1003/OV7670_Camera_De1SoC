@@ -68,15 +68,15 @@
     if(c[27])begin   
     
     led0_test <=0;
-    led0_r<=0;
-    led0_g<=0;
+    // led0_r<=0;
+    // led0_g<=0;
     led0_b<=0;
     end
     
     else begin
     led0_test <=1;
-    led0_r<=1;
-    led0_g<=1;
+    // led0_r<=1;
+    // led0_g<=1;
     led0_b<=1;
     end
     
@@ -116,18 +116,15 @@
 	camera_interface m0 //control logic for retrieving data from camera, storing data to asyn_fifo, and  sending data to sdram
 	(
 		.clk(clk),
-		.clk_100(clk_sdram),
+		.clk_100(clk),
+		.clk_vga(clk_vga),
 		.rst_n(rst_n),
 		.key(key),
-        .empty(empty),
 		.pir(pir),
-		.start_camera(idle),
 		//asyn_fifo IO/homes/user/stud/spring24/pp2870/Downloads/SecureCam/Test/top_module.qsf 
-		.rd_en(f2s_data_valid),
-		.rd_en_SD(rd_en_cam),
-		.data_count_r(data_count_r),
-		.dout(dout),
-		.dout_SD(dout_SD),
+		.rd_en(rd_en),
+		.rd_en_vga(rd_en),
+		.dout_vga(din),
 		//camera pinouts
 		.cmos_pclk(cmos_pclk),
 		.cmos_href(cmos_href),
@@ -139,39 +136,18 @@
 		.cmos_pwdn(cmos_pwdn),
 		.cmos_xclk(cmos_xclk),
 		//Debugging
-		.led_start(led0_start)
+		.led_start(led0_start),
+		.flag(led0_r),
+		.flag2(led0_g)
     );
 	 
-	 sdram_interface m1 //control logic for writing the pixel-data from camera to sdram and reading pixel-data from sdram to vga
-	 (
-		.clk(clk_sdram),
-		.rst_n(rst_n),
-		//asyn_fifo IO
-		.clk_vga(clk_vga),
-		.rd_en(rd_en),
-		.data_count_r(data_count_r),
-		.f2s_data(dout),
-		.f2s_data_valid(f2s_data_valid),
-		.empty_fifo(empty_fifo),
-		.dout(din),
-		//controller to sdram
-		.sdram_cke(sdram_cke), 
-		.sdram_cs_n(sdram_cs_n),
-		.sdram_ras_n(sdram_ras_n),
-		.sdram_cas_n(sdram_cas_n),
-		.sdram_we_n(sdram_we_n), 
-		.sdram_addr(sdram_addr),
-		.sdram_ba(sdram_ba), 
-		.sdram_dqm(sdram_dqm),
-		.sdram_dq(sdram_dq)
-    );
 	 
 	 vga_interface m2 //control logic for retrieving data from sdram, storing data to asyn_fifo, and sending data to vga
 	 (
 		.clk(clk),
 		.rst_n(rst_n),
 		//asyn_fifo IO
-		.empty_fifo(empty_fifo),
+		.empty_fifo(),
 		.din(din),
 		.clk_vga(clk_vga),
 		.rd_en(rd_en),   
@@ -182,6 +158,8 @@
 		.vga_out_b(vga_out_b),
 		.vga_out_vs(vga_out_vs),
 		.vga_out_hs(vga_out_hs)
+		
+		
     );
 
     two_edge	two_edge_inst_a (

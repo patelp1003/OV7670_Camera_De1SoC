@@ -1,5 +1,5 @@
 Flow report for top_module
-Mon Apr 29 17:14:56 2024
+Sat May 11 22:16:34 2024
 Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
@@ -41,24 +41,24 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Mon Apr 29 17:14:17 2024       ;
+; Flow Status                     ; Successful - Sat May 11 22:16:17 2024       ;
 ; Quartus Prime Version           ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
 ; Revision Name                   ; top_module                                  ;
 ; Top-level Entity Name           ; top_module                                  ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 602 / 32,070 ( 2 % )                        ;
-; Total registers                 ; 685                                         ;
+; Logic utilization (in ALMs)     ; 313 / 32,070 ( < 1 % )                      ;
+; Total registers                 ; 221                                         ;
 ; Total pins                      ; 102 / 457 ( 22 % )                          ;
 ; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 21,504 / 4,065,280 ( < 1 % )                ;
-; Total DSP Blocks                ; 0 / 87 ( 0 % )                              ;
+; Total block memory bits         ; 32,768 / 4,065,280 ( < 1 % )                ;
+; Total DSP Blocks                ; 1 / 87 ( 1 % )                              ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
 ; Total HSSI TX PCSs              ; 0                                           ;
 ; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 3 / 6 ( 50 % )                              ;
+; Total PLLs                      ; 2 / 6 ( 33 % )                              ;
 ; Total DLLs                      ; 0 / 4 ( 0 % )                               ;
 +---------------------------------+---------------------------------------------+
 
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/29/2024 17:11:46 ;
+; Start date & time ; 05/11/2024 22:14:47 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; top_module          ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 224948460876486.171442510608778        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 224948460877633.171548008721120        ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; MISC_FILE                           ; clock_165.cmp                          ; --            ; --          ; --         ;
@@ -129,11 +129,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:01:02     ; 1.0                     ; 839 MB              ; 00:00:12                           ;
-; Fitter               ; 00:00:53     ; 1.0                     ; 2602 MB             ; 00:00:43                           ;
-; Assembler            ; 00:00:24     ; 1.0                     ; 790 MB              ; 00:00:03                           ;
-; Timing Analyzer      ; 00:00:35     ; 1.1                     ; 1308 MB             ; 00:00:06                           ;
-; Total                ; 00:02:54     ; --                      ; --                  ; 00:01:04                           ;
+; Analysis & Synthesis ; 00:00:20     ; 1.0                     ; 829 MB              ; 00:00:28                           ;
+; Fitter               ; 00:00:54     ; 1.0                     ; 2585 MB             ; 00:01:27                           ;
+; Assembler            ; 00:00:11     ; 1.0                     ; 785 MB              ; 00:00:07                           ;
+; Timing Analyzer      ; 00:00:15     ; 1.1                     ; 1292 MB             ; 00:00:11                           ;
+; Total                ; 00:01:40     ; --                      ; --                  ; 00:02:13                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -142,10 +142,10 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+------------------+---------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name ; OS Version ; Processor type ;
 +----------------------+------------------+---------+------------+----------------+
-; Analysis & Synthesis ; micro35          ; Red Hat ; Red Hat    ; x86_64         ;
-; Fitter               ; micro35          ; Red Hat ; Red Hat    ; x86_64         ;
-; Assembler            ; micro35          ; Red Hat ; Red Hat    ; x86_64         ;
-; Timing Analyzer      ; micro35          ; Red Hat ; Red Hat    ; x86_64         ;
+; Analysis & Synthesis ; micro34          ; Red Hat ; Red Hat    ; x86_64         ;
+; Fitter               ; micro34          ; Red Hat ; Red Hat    ; x86_64         ;
+; Assembler            ; micro34          ; Red Hat ; Red Hat    ; x86_64         ;
+; Timing Analyzer      ; micro34          ; Red Hat ; Red Hat    ; x86_64         ;
 +----------------------+------------------+---------+------------+----------------+
 
 
